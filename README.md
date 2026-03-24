@@ -1,5 +1,22 @@
 # group4-project-website
-//Introduction//
+
+# Introduction
+
+//Work In Progress//
+
+Website Name:
+The name of the website is "EduBalance"
+
+What the Website Does:
+It will allow you tack on reminders to your assignments so as to remind you when it is due, it will let you record lectures and scan pdf's/work notes to summarize them and highlight on important details. It also works as a way to get college roommates if you need a roommate for your dorm or if you have a room you want to rent out. It will also help with finding jobs in and around campus (e.g. Babysitting). It will also have a coupon section for student discounts at various stores.
+
+Who the Website is intended for:
+The website is intended to make college life easier on the college student, helping the student with any type of workload or college life balance.
+
+Why we chose this concept:
+We chose this website concept as we believe that college, as well as providing an education, is designed to help you learn more about being an adult and all the tasks that come with it. This includes finding jobs, finding roommates or apartments, and helping with daily tasks and reminders to help you set a routine.
+
+
 
 # Project Scope
 
