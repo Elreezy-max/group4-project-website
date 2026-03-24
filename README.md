@@ -71,7 +71,7 @@ The downfall of this is I value my autonomy and would rather work alone. This re
 and innovation. 
   To combat this I could partner up with complemenitive personality types like **ISTJs**, **ENTJs**, **ENFPs**, or **INFPs**. The first two types are well organized and detailed-
   oriented who value efficiency and clear planning. The others are creative types who could collaborate by bringing new ideas and different perspectives. Conflicts will occur with members who perfer a flexible
-  or procrastinate. We could manage this by using clear communication of expectations and goals, regular check-ins, and by recognizing that different approaches can improve outcome.
+  or procrastinate. We could manage this by using clear communication of expectations and goals, regular check-ins, and by recognizing that different approaches can improve outcomes.
 
 
 
