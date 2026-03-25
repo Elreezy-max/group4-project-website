@@ -1,6 +1,6 @@
 # group4-project-website
 
-# Introduction
+## Introduction
 
 ### Website Name:
 EduBalance
