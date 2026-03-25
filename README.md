@@ -2,17 +2,17 @@
 
 # Introduction
 
-## Website Name:
+### Website Name:
 EduBalance
 
-## What the Website Does:
+### What the Website Does:
 EduBalance is a website that is primarily designed to help students settle in their new lifestyle and manage their both academic and personal responsibilities. EduBalance allows users to track their assignment deadlines through reminders, record lectures, and scan PDFs or notes to generate summaries and highlight key information for later use.
 EduBalance includes additional features for personal use such as roommate matching, local job listings (e.g. babysitting or part-time work), and a coupon section for student discounts.
 
-## Who the Website is intended for:
+### Who the Website is intended for:
 EduBalance is intended and designed for college students who are looking to better manage their college workload, finances, and daily responsibilities while maintaining a balanced lifestyle fit to their needs.
 
-## Why we chose this concept:
+### Why we chose this concept:
 We chose this concept as we believe that college students often face hard challenges balancing work, their personal life, and their newfoumd academic life. EduBalance aims to help centralize these needs into one scalable platform that can expand into multiple pages such as a dashboard, job board, roommate finder, and academic tools section. These new tools at the side of college students will help them find their foothold in the college terrain and help them find the balance needed in their new lifestyle.
 
 
