@@ -2,19 +2,18 @@
 
 # Introduction
 
-//Work In Progress//
-
 Website Name:
-The name of the website is "EduBalance"
+EduBalance
 
 What the Website Does:
-It will allow you tack on reminders to your assignments so as to remind you when it is due, it will let you record lectures and scan pdf's/work notes to summarize them and highlight on important details. It also works as a way to get college roommates if you need a roommate for your dorm or if you have a room you want to rent out. It will also help with finding jobs in and around campus (e.g. Babysitting). It will also have a coupon section for student discounts at various stores.
+EduBalance is a website that is primarily designed to help students settle in their new lifestyle and manage their both academic and personal responsibilities. EduBalance allows users to track their assignment deadlines through reminders, record lectures, and scan PDFs or notes to generate summaries and highlight key information for later use.
+EduBalance includes additional features for personal use such as roommate matching, local job listings (e.g. babysitting or part-time work), and a coupon section for student discounts.
 
 Who the Website is intended for:
-The website is intended to make college life easier on the college student, helping the student with any type of workload or college life balance.
+EduBalance is intended and designed for college students who are looking to better manage their college workload, finances, and daily responsibilities while maintaining a balanced lifestyle fit to their needs.
 
 Why we chose this concept:
-We chose this website concept as we believe that college, as well as providing an education, is designed to help you learn more about being an adult and all the tasks that come with it. This includes finding jobs, finding roommates or apartments, and helping with daily tasks and reminders to help you set a routine.
+We chose this concept as we believe that college students often face hard challenges balancing work, their personal life, and their newfoumd academic life. EduBalance aims to help centralize these needs into one scalable platform that can expand into multiple pages such as a dashboard, job board, roommate finder, and academic tools section. These new tools at the side of college students will help them find their foothold in the college terrain and help them find the balance needed in their new lifestyle.
 
 
 
@@ -90,8 +89,23 @@ and innovation.
   oriented who value efficiency and clear planning. The others are creative types who could collaborate by bringing new ideas and different perspectives. Conflicts will occur with members who perfer a flexible
   or procrastinate. We could manage this by using clear communication of expectations and goals, regular check-ins, and by recognizing that different approaches can improve outcomes.
 
+  My name is Ian Harris, I am from Alabama and I have a few various hobbies and interests. I am incredibly into gaming, have recently gotten into gardening with some of my friends, and have been reading War and Peace on my kindle. I am an avid fan of indie development of all kinds, including animation, game development, and movies. As a fun fact, I have also recently become an ordained minister in Dudeism and can legally marry two people in the USA. I am hoping to get into Vanlife and continue my game development career on the road and wander all over the USA. 
+  For this assignment I am wanting to help write the code in HTML and help design the website with CSS. 
+  My personality type is INTP and it is stated that I value independence and autonomy highly. I work at my own pace and am set in my own ways, following my own interests and methods. I am confortable in my own imagination than in practicality or in social situations. As such I have more difficulty conforming to external structures, deadlines, and in social situations. The personality types I work best with are ENTJ, ENTP, INTJ, INFJ, and INFP. Conflict might occur on my side as I could be perceived as cold and detached from the conversation. I might also say something unintentionally hurtful or blunt while trying to be clear and concise in what I say. We could all manage this in maintaining clear expectations of goals and clear communication across all group members. We could apply what we are doing with the website where we remind each other of how to help and remind each other of the work ahead.
 
 
+## Technical Requirements 
+
+(WIP)
+### Languages
+- HTML
+- CSS
+- JavaScript
+  
+### Potential Tools / Frameworks
+
+### Hosting site
+- GitHub Pages
 
 
 
