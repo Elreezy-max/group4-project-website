@@ -1,5 +1,3 @@
-# group4-project-website
-
 ## Introduction
 
 ### Website Name:
