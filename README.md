@@ -74,6 +74,8 @@ Our goal for the website is for it to be:
 
 ## Wireframe
 //Wireframe//
+![Wireframe](https://github.com/Elreezy-max/group4-project-website/blob/main/wireframe_group4.png?raw=true)
+
 
 ## Meet The Developers
 
