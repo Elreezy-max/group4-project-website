@@ -15,11 +15,11 @@ We chose this concept as we believe that college students often face hard challe
 
 
 
-# Project Scope
+## Project Scope
 
 The expected scope of this project is to create a student-focused website that provides useful academic and everyday college resources in one location. The website is planned as a multi-page platform that can expand over time as additional features are developed.
 
-## Planned Website Pages
+### Planned Website Pages
 
 The website may eventually include **5–8 pages**, such as:
 
@@ -30,7 +30,7 @@ The website may eventually include **5–8 pages**, such as:
 * Roommate / Dorm Listings
 * About / Contact Page
 
-## Possible Features
+### Possible Features
 
 Some possible features might include:
 
@@ -43,7 +43,7 @@ Some possible features might include:
 * Interactive buttons and hover effects
 * AI support for audio recording and live note-taking
 
-## Features Outside Current Scope
+### Features Outside Current Scope
 
 Features outside the current scope include:
 
@@ -53,7 +53,7 @@ Features outside the current scope include:
 * Full database integration
 * Advanced security controls
 
-## Future Expansion
+### Future Expansion
 
 This website could later expand to include:
 
@@ -64,7 +64,7 @@ This website could later expand to include:
 * Admin-controlled content approval
 * Student Skill-Swap page
 
-## Design Goal
+### Design Goal
 
 Our goal for the website is for it to be:
 
@@ -72,10 +72,10 @@ Our goal for the website is for it to be:
 * Clean and simple
 * Scalable for future additions and requests
 
-
+## Wireframe
 //Wireframe//
 
-# Meet The Developers
+## Meet The Developers
 
   Hello, I'm Brandon Elrod, a passionate student on the path of graduating with the an Associate's in Software Development. 
 I am from Alabama and some of my hobbies include gaming, reading, cooking, and I am an anime fan. I work as an Engineer Tech III at a manufacturing facility that I acquired from recieving
@@ -92,16 +92,18 @@ and innovation.
   My personality type is INTP and it is stated that I value independence and autonomy highly. I work at my own pace and am set in my own ways, following my own interests and methods. I am confortable in my own imagination than in practicality or in social situations. As such I have more difficulty conforming to external structures, deadlines, and in social situations. The personality types I work best with are ENTJ, ENTP, INTJ, INFJ, and INFP. Conflict might occur on my side as I could be perceived as cold and detached from the conversation. I might also say something unintentionally hurtful or blunt while trying to be clear and concise in what I say. We could all manage this in maintaining clear expectations of goals and clear communication across all group members. We could apply what we are doing with the website where we remind each other of how to help and remind each other of the work ahead.
 
 
-## Technical Requirements 
+## Technical Requirements
 
-(WIP)
 ### Languages
 - HTML
 - CSS
 - JavaScript
-  
-### Potential Tools / Frameworks
 
-### Hosting site
+### Frameworks / Libraries
+- Bootstrap
+
+### Backend / Database
+- Supabase
+
+### Hosting
 - GitHub Pages
-
