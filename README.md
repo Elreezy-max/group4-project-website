@@ -73,7 +73,7 @@ Our goal for the website is for it to be:
 * Scalable for future additions and requests
 
 ## Wireframe
-//Wireframe//
+
 ![Wireframe](https://github.com/Elreezy-max/group4-project-website/blob/main/wireframe_group4.png?raw=true)
 
 
