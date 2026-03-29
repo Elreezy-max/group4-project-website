@@ -94,6 +94,13 @@ and innovation.
   My personality type is INTP and it is stated that I value independence and autonomy highly. I work at my own pace and am set in my own ways, following my own interests and methods. I am confortable in my own imagination than in practicality or in social situations. As such I have more difficulty conforming to external structures, deadlines, and in social situations. The personality types I work best with are ENTJ, ENTP, INTJ, INFJ, and INFP. Conflict might occur on my side as I could be perceived as cold and detached from the conversation. I might also say something unintentionally hurtful or blunt while trying to be clear and concise in what I say. We could all manage this in maintaining clear expectations of goals and clear communication across all group members. We could apply what we are doing with the website where we remind each other of how to help and remind each other of the work ahead.
 
 
+  Hello, my name is Miguel Jose Francisco, and I am from Russellville, Alabama. I’m currently working toward a degree in Cybersecurity, and I’m taking this class to build my skills in web development and better understand how websites work from both a development and security perspective.
+In my free time, I enjoy playing video games, especially adventure and FPS games. I also like learning new things and experimenting with technology, and lately I’ve been getting into robotics. One unique thing about me is the scar on the right side of my face. The real story is that it came from an infection when I was born, but I usually say it was from a high-stakes battle I barely survived—it just sounds better.
+Right now, I work at a factory operating a mill machine, but my goal is to move into a career in IT. I have some experience with coding, starting with Scratch, and I also have a certification in Microsoft Office. I’m currently building my skills in HTML, CSS, and JavaScript.
+My personality type is INTJ, so I tend to be pretty independent, analytical, and focused on long-term goals. I like solving problems and understanding how systems work, but I also know I can be a bit quiet or prefer working on my own at times.
+For this project, I’m interested in working on the HTML and CSS side, and possibly exploring how AI could be used in the site. I think I work best with people who are organized or bring creative ideas, and I’m looking forward to seeing what we can build as a team.
+
+
 ## Technical Requirements
 
 ### Languages
