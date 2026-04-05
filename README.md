@@ -4,15 +4,13 @@
 EduBalance
 
 ### What the Website Does:
-EduBalance is a website that is primarily designed to help students settle in their new lifestyle and manage their both academic and personal responsibilities. EduBalance allows users to track their assignment deadlines through reminders, record lectures, and scan PDFs or notes to generate summaries and highlight key information for later use.
-EduBalance includes additional features for personal use such as roommate matching, local job listings (e.g. babysitting or part-time work), and a coupon section for student discounts.
+EduBalance is a website designed to help students acclimate to college living by managing both academic and personal responsibilities. EduBalance allows users to track assignment deadlines through notification reminders, offers lecture recordings, and scans documents/notes/PDFs to generate summaries and highlight key information for later use. EduBalance includes additional features for personal use such as roommate matching, local job listings (e.g. babysitting or part-time work), and a coupon section for student discounts.
 
 ### Who the Website is intended for:
-EduBalance is intended and designed for college students who are looking to better manage their college workload, finances, and daily responsibilities while maintaining a balanced lifestyle fit to their needs.
+EduBalance is intended and designed for college students who are looking to better manage their college workload, finances, and daily responsibilities to maintaining a balanced lifestyle tailored to their needs.
 
 ### Why we chose this concept:
-We chose this concept as we believe that college students often face hard challenges balancing work, their personal life, and their newfoumd academic life. EduBalance aims to help centralize these needs into one scalable platform that can expand into multiple pages such as a dashboard, job board, roommate finder, and academic tools section. These new tools at the side of college students will help them find their foothold in the college terrain and help them find the balance needed in their new lifestyle.
-
+We chose this concept as we believe that college students often struggle to balance work, personal living, and newfoumd academic life. EduBalance aims to help centralize these needs into one scalable platform that can expand into multiple pages such as a dashboard, job board, roommate finder, and academic tools section. These streamlined tools will help college students acclimate to the college terrain with the balance necessary for excelling through their college years.
 
 
 ## Project Scope
@@ -28,7 +26,7 @@ The website may eventually include **5–8 pages**, such as:
 * Coupons and Discounts
 * Babysitter Listings
 * Roommate / Dorm Listings
-* About / Contact Page
+* About / Support/ Contact Page
 
 ### Possible Features
 
@@ -36,7 +34,7 @@ Some possible features might include:
 
 * Navigation menu across all pages
 * Downloadable PDF notes and resources
-* Embedded videos from YouTube
+* Embedded videos from YouTube or another multi-media platform
 * Search or filter tools for listings and notes
 * User input forms for submitting resources
 * Mobile-friendly responsive design
@@ -79,8 +77,8 @@ Our goal for the website is for it to be:
 
 ## Meet The Developers
 
-  Hello, I'm Brandon Elrod, a passionate student on the path of graduating with the an Associate's in Software Development. 
-I am from Alabama and some of my hobbies include gaming, reading, cooking, and I am an anime fan. I work as an Engineer Tech III at a manufacturing facility that I acquired from recieving
+  Hello, I'm Brandon Elrod, a passionate student on the path of graduating with an Associate's in Software Development. 
+I am from Alabama. Some of my hobbies include gaming, reading, cooking, and I am an anime fan. I work as an Engineer Tech III at a manufacturing facility that I acquired from recieving
 a Microcomputer Applications certification from my major. For this project, I am interested in the planning and the design of the website, which is compatiable with my
 personality type of **INTJ-A (Architect)**.  As an **Architect** my mind constantly seeks to understand, its driven by curiosity and a desire to improve systems and ideas. 
 The downfall of this is I value my autonomy and would rather work alone. This reverts to me being a lead over an area at my job before without a team, but because of this I feel comfortable with problems
@@ -99,6 +97,8 @@ In my free time, I enjoy playing video games, especially adventure and FPS games
 Right now, I work at a factory operating a mill machine, but my goal is to move into a career in IT. I have some experience with coding, starting with Scratch, and I also have a certification in Microsoft Office. I’m currently building my skills in HTML, CSS, and JavaScript.
 My personality type is INTJ, so I tend to be pretty independent, analytical, and focused on long-term goals. I like solving problems and understanding how systems work, but I also know I can be a bit quiet or prefer working on my own at times.
 For this project, I’m interested in working on the HTML and CSS side, and possibly exploring how AI could be used in the site. I think I work best with people who are organized or bring creative ideas, and I’m looking forward to seeing what we can build as a team.
+
+Hello, my name is Annastasia, and I live in The Shoals Area of North Alabama. I am currently pursuing a degree in Computer Science to expand my technical skill set. I wear many hats! —I work in digital media as a Designer and Account Executive, I've done freelance AI data evaluation, and I'm raising three amazing kids. In my free time I'm a writer, singer/songwriter, and musician. I also love volunteering with my church and getting outdoors to go kayaking or camping. For this project, I am really interested in helping with the front-end styling and content creation. My personality type is ENFJ-A (The Protagonist). Because I juggle so many different responsibilities, I value flexibility and creative problem-solving. I work really well with structured planners (like the INTJs in our group!) because they help keep the timeline focused while I can help brainstorm creative solutions, handle design elements, and ensure our users have a great experience.
 
 
 ## Technical Requirements
