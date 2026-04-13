@@ -1,0 +1,181 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4ff;
+    color: #222;
+    padding: 20px;
+}
+
+/* HEADER */
+header {
+    background: #ffffff;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #000;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: #111;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+input[type="search"] {
+    padding: 10px 14px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    background-color: #f8fbff;
+    width: 100%;
+}
+
+/* MAIN GRID */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 0;
+}
+
+/* SECTIONS */
+section,
+aside {
+    background: #ffffff;
+    padding: 18px;
+    border-radius: 20px;
+    border: 2px solid #000;
+}
+
+section h2,
+aside h2 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    color: #111;
+}
+
+/* SPECIFIC AREAS */
+.upcoming {
+    grid-column: 1;
+    grid-row: 1;
+    background-color: #ffffff;
+}
+
+.tools {
+    grid-column: 2;
+    grid-row: 1;
+    background-color: #dceeff;
+}
+
+.jobs {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #dceeff;
+}
+
+.discounts {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    background-color: #ffffff;
+}
+
+/* UPCOMING LIST */
+.upcoming ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upcoming li {
+    background-color: #f4f9ff;
+    border: 2px solid #000;
+    border-radius: 14px;
+    padding: 10px 12px;
+}
+
+/* CARDS */
+.card {
+    background: #f4f9ff;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 14px;
+    border: 2px solid #000;
+    font-weight: 500;
+}
+
+/* TOOL CARDS */
+.tool-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.tools .card {
+    text-align: center;
+    background-color: #ffffff;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* JOBS + DISCOUNTS */
+.jobs .card,
+.discounts .card {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .upcoming,
+    .tools,
+    .jobs,
+    .discounts {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+}

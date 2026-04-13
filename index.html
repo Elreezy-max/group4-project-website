@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>[Welcome, Student!]</h1>
+
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Study Tools</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Roommates</a></li>
+                <li><a href="#">Coupons</a></li>
+            </ul>
+        </nav>
+
+        <input type="search" placeholder="Search..." aria-label="Search dashboard">
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main class="dashboard-grid">
+
+        <!-- UPCOMING TASKS -->
+        <section class="upcoming" aria-labelledby="upcoming-title">
+            <h2 id="upcoming-title">Upcoming</h2>
+            <ul>
+                <li>Assignment Due</li>
+                <li>Study Session</li>
+                <li>Group Project</li>
+            </ul>
+        </section>
+
+        <!-- QUICK TOOLS -->
+        <section class="tools" aria-labelledby="tools-title">
+            <h2 id="tools-title">Quick Tools</h2>
+            <div class="tool-cards">
+                <div class="card">Scan PDF</div>
+                <div class="card">Record Lecture</div>
+                <div class="card">Summarize AI</div>
+            </div>
+        </section>
+
+        <!-- FEATURED JOBS -->
+        <section class="jobs" aria-labelledby="jobs-title">
+            <h2 id="jobs-title">Featured Jobs</h2>
+            <article class="card">Campus IT Support</article>
+            <article class="card">Barista</article>
+        </section>
+
+        <!-- DISCOUNTS -->
+        <aside class="discounts" aria-labelledby="discounts-title">
+            <h2 id="discounts-title">Student Discounts</h2>
+            <article class="card">10% Off Books</article>
+            <article class="card">Free Coffee Fridays</article>
+        </aside>
+
+    </main>
+
+</body>
+</html>
