@@ -8,61 +8,83 @@
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>[Welcome, Student!]</h1>
+    <div class="page-wrapper">
 
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Study Tools</a></li>
-                <li><a href="#">Jobs</a></li>
-                <li><a href="#">Roommates</a></li>
-                <li><a href="#">Coupons</a></li>
-            </ul>
-        </nav>
-
-        <input type="search" placeholder="Search..." aria-label="Search dashboard">
-    </header>
-
-    <!-- MAIN LAYOUT -->
-    <main class="dashboard-grid">
-
-        <!-- UPCOMING TASKS -->
-        <section class="upcoming" aria-labelledby="upcoming-title">
-            <h2 id="upcoming-title">Upcoming</h2>
-            <ul>
-                <li>Assignment Due</li>
-                <li>Study Session</li>
-                <li>Group Project</li>
-            </ul>
-        </section>
-
-        <!-- QUICK TOOLS -->
-        <section class="tools" aria-labelledby="tools-title">
-            <h2 id="tools-title">Quick Tools</h2>
-            <div class="tool-cards">
-                <div class="card">Scan PDF</div>
-                <div class="card">Record Lecture</div>
-                <div class="card">Summarize AI</div>
+        <!-- HEADER -->
+        <header>
+            <div class="logo-container">
+                <img src="logo.png" alt="EB Logo" class="logo">
             </div>
+
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#" class="active" aria-current="page">Home</a></li>
+                    <li><a href="#">Study Tools</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Roommates</a></li>
+                    <li><a href="#">Coupons</a></li>
+                </ul>
+            </nav>
+
+            <label for="search" class="visually-hidden">Search dashboard</label>
+            <input
+                type="search"
+                id="search"
+                placeholder="Search..."
+                aria-label="Search dashboard content"
+            >
+        </header>
+
+        <!-- WELCOME BANNER -->
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">[ Welcome, Student! ]</h1>
+            <button class="add-task-btn">Add Task</button>
         </section>
 
-        <!-- FEATURED JOBS -->
-        <section class="jobs" aria-labelledby="jobs-title">
-            <h2 id="jobs-title">Featured Jobs</h2>
-            <article class="card">Campus IT Support</article>
-            <article class="card">Barista</article>
-        </section>
+        <!-- MAIN GRID -->
+        <main class="dashboard-grid">
 
-        <!-- DISCOUNTS -->
-        <aside class="discounts" aria-labelledby="discounts-title">
-            <h2 id="discounts-title">Student Discounts</h2>
-            <article class="card">10% Off Books</article>
-            <article class="card">Free Coffee Fridays</article>
-        </aside>
+            <section class="upcoming" aria-labelledby="upcoming-title">
+                <h2 id="upcoming-title">Upcoming</h2>
+                <ul>
+                    <li>Math Quiz - Today 2:00 PM</li>
+                    <li>Essay Due - Fri 11:59 PM</li>
+                    <li>Group Meeting - Sat 10:00 AM</li>
+                </ul>
+            </section>
 
-    </main>
+            <section class="tools" aria-labelledby="tools-title">
+                <h2 id="tools-title">Quick Tools</h2>
+                <div class="tool-cards">
+                    <div class="card">Scan PDF</div>
+                    <div class="card">Record Lecture</div>
+                    <div class="card">Summarize AI</div>
+                </div>
+            </section>
 
+            <section class="jobs" aria-labelledby="jobs-title">
+                <h2 id="jobs-title">Featured Jobs</h2>
+                <article class="card">Babysitting - $20/hr</article>
+                <article class="card">Library Asst. - Part-time</article>
+                <article class="card">Tutor - CS 101</article>
+            </section>
+
+            <aside class="discounts" aria-labelledby="discounts-title">
+                <h2 id="discounts-title">Student Discounts</h2>
+                <div class="discount-row">
+                    <article class="card">Save 10% at Local Cafe</article>
+                    <article class="card">Save 10% at Local Cafe</article>
+                    <article class="card">Save 10% at Local Cafe</article>
+                </div>
+            </aside>
+
+        </main>
+
+        <footer>
+            <p>About | Contact | GitHub Link</p>
+        </footer>
+
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
