@@ -186,19 +186,73 @@ h2 {
     margin: 0;
 }
 
-/* DISCOUNTS */
-.discount-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+/* STUDENT DISCOUNTS */
+/* SECTION (keeps it aligned with your layout) */
+.discounts {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  overflow: hidden; /* prevents page stretching */
 }
 
-.discounts .card {
-    background-color: #f2f2f2;
-    border: 1px solid #c7c7c7;
-    border-radius: 10px;
-    padding: 14px;
-    min-height: 72px;
+/* WRAPPER */
+.discount-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* VIEWPORT (window showing ONLY 3 cards) */
+.discount-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* TRACK (moves left/right) */
+.discount-track {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+/* CARDS (exactly 3 visible) */
+.card {
+  flex: 0 0 calc((100% - 30px) / 3); /* 3 cards */
+  height: 100px;
+  background: #e0e0e0;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* ARROW BUTTONS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2f6f73;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.arrow.left {
+  left: -20px;
+}
+
+.arrow.right {
+  right: -20px;
 }
 
 /* FOOTER */
