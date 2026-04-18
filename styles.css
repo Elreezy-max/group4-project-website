@@ -1,4 +1,46 @@
 /* RESET */
+/* =========================================
+   UX / UI POLISH (Added for Issue #9)
+   ========================================= */
+
+/* 1. Modernize the Typography */
+/* Upgrades the standard Arial to the sleek system font used by Apple/modern Androids */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. Button Micro-Interactions */
+/* Adds a pointer cursor, a smooth hover lift, and a drop shadow to the Add Task button */
+.add-task-btn {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-task-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 3. Card Hover States */
+/* Makes the tool and discount cards feel clickable and interactive */
+.tools .card, .discounts .card {
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tools .card:hover, .discounts .card:hover {
+    transform: translateY(-3px);
+    border-color: #3f7482;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 4. Accessibility Focus States */
+/* Shows a crisp teal outline when users click or tab into the search bar */
+input[type="search"]:focus {
+    outline: 2px solid #3f7482;
+    outline-offset: 2px;
+}
+
 * {
     margin: 0;
     padding: 0;
