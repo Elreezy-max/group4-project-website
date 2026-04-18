@@ -38,3 +38,29 @@ searchInput.addEventListener("input", function () {
         }
     });
 });
+
+// Student Discounts
+let track = document.getElementById("track");
+let index = 0;
+
+let totalCards = document.querySelectorAll(".card").length;
+let maxIndex = totalCards - 3; // show 3 at a time
+
+document.getElementById("rightBtn").onclick = function () {
+  if (index < maxIndex) {
+    index++;
+    updateSlider();
+  }
+};
+
+document.getElementById("leftBtn").onclick = function () {
+  if (index > 0) {
+    index--;
+    updateSlider();
+  }
+};
+
+function updateSlider() {
+  let cardWidth = document.querySelector(".card").offsetWidth + 15; // gap
+  track.style.transform = "translateX(-" + (index * cardWidth) + "px)";
+}
