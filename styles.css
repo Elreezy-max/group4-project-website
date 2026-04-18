@@ -256,11 +256,30 @@ h2 {
 }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 18px 12px 8px;
-    font-size: 1rem;
-    color: #222;
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #777;
 }
 
 /* RESPONSIVE */
