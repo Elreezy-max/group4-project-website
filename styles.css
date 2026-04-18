@@ -238,3 +238,24 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .hero {
+        text-align: center;
+    }
+}
