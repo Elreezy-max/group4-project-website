@@ -390,3 +390,135 @@ h2 {
 .coupon { flex: 1; border: 1px solid #cdd4da; border-radius: 6px; background: #f7f8f9; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
 .coupon-img { width: 42px; height: 36px; background: #3a9e99; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
 .coupon-bar { height: 4px; border-radius: 2px; background: #ccc; width: 80%; }}
+    /* HERO SECTION */
+.hero {
+  background-color: #c5d8e8;
+  text-align: center;
+  padding: 36px 20px 30px;
+  border-left: 1px solid #d7e6f0;
+  border-right: 1px solid #d7e6f0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 16px;
+}
+
+.star-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.star {
+  font-size: 18px;
+  color: #9bb8cc;
+}
+
+/* TASK SECTION */
+.task-section {
+  background: #fff;
+  border: 1px solid #cdd4da;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 16px;
+}
+
+.task-section h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.task-input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.task-input-area input[type="text"] {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid #cdd4da;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+}
+
+.task-input-area input[type="text"]:focus {
+  border-color: #2e7d7a;
+}
+
+.task-input-area input[type="datetime-local"] {
+  padding: 9px 12px;
+  border: 1px solid #cdd4da;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+}
+
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #2e7d7a;
+  cursor: pointer;
+}
+
+.task-item label {
+  cursor: pointer;
+}
+
+.task-item.done label {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .task-input-area {
+    flex-direction: column;
+  }
+
+  .task-input-area input,
+  .task-input-area button {
+    width: 100%;
+  }
+}
+}
