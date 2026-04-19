@@ -1,61 +1,25 @@
-/* RESET */
 /* =========================================
-   UX / UI POLISH (Added for Issue #9)
+   RESET
    ========================================= */
-
-/* 1. Modernize the Typography */
-/* Upgrades the standard Arial to the sleek system font used by Apple/modern Androids */
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-
-/* 2. Button Micro-Interactions */
-/* Adds a pointer cursor, a smooth hover lift, and a drop shadow to the Add Task button */
-.add-task-btn {
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.add-task-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* 3. Card Hover States */
-/* Makes the tool and discount cards feel clickable and interactive */
-.tools .card, .discounts .card {
-    cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tools .card:hover, .discounts .card:hover {
-    transform: translateY(-3px);
-    border-color: #3f7482;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* 4. Accessibility Focus States */
-/* Shows a crisp teal outline when users click or tab into the search bar */
-input[type="search"]:focus {
-    outline: 2px solid #3f7482;
-    outline-offset: 2px;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================================
+   BODY
+   ========================================= */
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #eef6fb;
     color: #222;
     padding: 20px;
 }
 
-/* PAGE WRAPPER */
+/* =========================================
+   PAGE WRAPPER
+   ========================================= */
 .page-wrapper {
     max-width: 1150px;
     margin: 0 auto;
@@ -64,7 +28,9 @@ body {
     padding: 12px;
 }
 
-/* HEADER */
+/* =========================================
+   HEADER
+   ========================================= */
 header {
     background: linear-gradient(to right, #3f7482, #4f8794);
     padding: 12px 18px;
@@ -75,7 +41,6 @@ header {
     border-radius: 10px 10px 0 0;
 }
 
-/* LOGO */
 .logo-container {
     display: flex;
     align-items: center;
@@ -88,7 +53,9 @@ header {
     border-radius: 10px;
 }
 
-/* NAV */
+/* =========================================
+   NAV
+   ========================================= */
 nav ul {
     display: flex;
     align-items: center;
@@ -103,26 +70,37 @@ nav a {
     font-size: 0.95rem;
     padding: 6px 8px;
     border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 
 nav a.active {
-    background-color: rgba(255, 255, 255, 0.12);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.16);
 }
 
-/* SEARCH */
+/* =========================================
+   SEARCH
+   ========================================= */
 input[type="search"] {
     width: 100%;
     padding: 10px 14px;
     border: 1px solid #b7b7b7;
     border-radius: 10px;
     background-color: #ffffff;
+    font-size: 0.9rem;
 }
 
-/* ACCESSIBILITY */
+input[type="search"]:focus {
+    outline: 2px solid #3f7482;
+    outline-offset: 2px;
+}
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -132,7 +110,9 @@ input[type="search"] {
     white-space: nowrap;
 }
 
-/* HERO */
+/* =========================================
+   HERO
+   ========================================= */
 .hero {
     background-color: #dceefd;
     text-align: center;
@@ -148,6 +128,9 @@ input[type="search"] {
     margin-bottom: 20px;
 }
 
+/* =========================================
+   BUTTON
+   ========================================= */
 .add-task-btn {
     background-color: #4c8390;
     color: #ffffff;
@@ -157,9 +140,98 @@ input[type="search"] {
     font-size: 1.1rem;
     font-weight: 700;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* MAIN GRID */
+.add-task-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================
+   TASK SECTION
+   ========================================= */
+.task-section {
+    background: #fff;
+    border: 1px solid #cdd4da;
+    border-left: 1px solid #d7e6f0;
+    border-right: 1px solid #d7e6f0;
+    padding: 20px 24px;
+}
+
+.task-section h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: #111;
+}
+
+.task-input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.task-input-area input[type="text"],
+.task-input-area input[type="datetime-local"] {
+    padding: 9px 12px;
+    border: 1px solid #cdd4da;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+}
+
+.task-input-area input[type="text"] {
+    flex: 1;
+}
+
+.task-input-area input[type="text"]:focus,
+.task-input-area input[type="datetime-local"]:focus {
+    border-color: #2e7d7a;
+}
+
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    accent-color: #2e7d7a;
+    cursor: pointer;
+}
+
+.task-item label {
+    cursor: pointer;
+}
+
+.task-item.done label {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* =========================================
+   MAIN GRID
+   ========================================= */
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -171,7 +243,9 @@ input[type="search"] {
     background-color: #ffffff;
 }
 
-/* PANELS */
+/* =========================================
+   PANELS
+   ========================================= */
 .upcoming,
 .tools,
 .jobs,
@@ -188,12 +262,14 @@ input[type="search"] {
 .discounts { grid-area: discounts; }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-bottom: 14px;
     color: #111;
 }
 
-/* UPCOMING */
+/* =========================================
+   UPCOMING
+   ========================================= */
 .upcoming ul {
     list-style: none;
     display: grid;
@@ -201,11 +277,18 @@ h2 {
 }
 
 .upcoming li {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
 }
 
-/* TOOL CARDS */
+.upcoming li:last-child {
+    border-bottom: none;
+}
+
+/* =========================================
+   TOOL CARDS
+   ========================================= */
 .tool-cards {
     display: grid;
     gap: 10px;
@@ -216,9 +299,19 @@ h2 {
     border: 1px solid #a9a9a9;
     border-radius: 10px;
     padding: 12px 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* JOB CARDS */
+.tools .card:hover {
+    transform: translateY(-3px);
+    border-color: #3f7482;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   JOB CARDS
+   ========================================= */
 .jobs .card {
     background: transparent;
     border: none;
@@ -226,109 +319,130 @@ h2 {
     border-radius: 0;
     padding: 10px 0;
     margin: 0;
+    display: block;
 }
 
-/* STUDENT DISCOUNTS */
-/* SECTION (keeps it aligned with your layout) */
+.jobs .card:last-child {
+    border-bottom: none;
+}
+
+/* =========================================
+   STUDENT DISCOUNTS
+   ========================================= */
 .discounts {
-  width: 100%;
-  max-width: 900px;
-  margin: 20px auto;
-  overflow: hidden; /* prevents page stretching */
+    width: 100%;
+    overflow: hidden;
 }
 
-/* WRAPPER */
 .discount-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
 }
 
-/* VIEWPORT (window showing ONLY 3 cards) */
 .discount-viewport {
-  overflow: hidden;
-  width: 100%;
+    overflow: hidden;
+    width: 100%;
 }
 
-/* TRACK (moves left/right) */
 .discount-track {
-  display: flex;
-  gap: 15px;
-  transition: transform 0.3s ease;
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease;
 }
 
-/* CARDS (exactly 3 visible) */
-.card {
-  flex: 0 0 calc((100% - 30px) / 3); /* 3 cards */
-  height: 100px;
-  background: #e0e0e0;
-  border-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  box-sizing: border-box;
+.discount-card {
+    flex: 0 0 calc((100% - 30px) / 3);
+    height: 100px;
+    background: #e0f0f5;
+    border: 1px solid #4b7d87;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* ARROW BUTTONS */
+.discount-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   ARROWS
+   ========================================= */
 .arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #2f6f73;
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3f7482;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.arrow:hover {
+    background: #2f5f6b;
 }
 
 .arrow.left {
-  left: -20px;
+    left: -10px;
 }
 
 .arrow.right {
-  right: -20px;
+    right: -10px;
 }
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+   ========================================= */
 .footer {
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  background: #f0f0f0;
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    background: #f0f0f0;
+    border-radius: 0 0 10px 10px;
 }
 
 .footer-links {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .footer-text {
-  font-size: 14px;
-  color: #777;
+    font-size: 14px;
+    color: #777;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE — TABLET
+   ========================================= */
 @media (max-width: 900px) {
     header {
         grid-template-columns: 1fr;
         gap: 12px;
+        text-align: center;
     }
 
     nav ul {
@@ -349,1845 +463,38 @@ h2 {
             "discounts";
     }
 
-    .discount-row {
-        grid-template-columns: 1fr;
+    .discount-card {
+        flex: 0 0 calc((100% - 15px) / 2);
     }
 }
-/* MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+
+/* =========================================
+   RESPONSIVE — MOBILE
+   ========================================= */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
     }
 
-    .dashboard-grid {
-        grid-template-columns: 1fr; 
+    .task-input-area {
+        flex-direction: column;
     }
 
-    .hero {
-        text-align: center;
+    .task-input-area input,
+    .task-input-area button {
+        width: 100%;
     }
-/* UPCOMING TASKS */
-.task-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.task-item { display: flex; align-items: center; gap: 8px; font-size: 13px; }
-.task-item input[type=checkbox] { width: 13px; height: 13px; accent-color: #2e7d7a; }
 
-/* QUICK TOOLS */
-.tool-btn { display: flex; align-items: center; gap: 10px; width: 100%; background: #f0f0f0; border: 1px solid #d4d4d4; border-radius: 5px; padding: 9px 13px; font-size: 13px; margin-bottom: 8px; cursor: pointer; }
-.tool-icon { width: 22px; height: 22px; background: #3a9e99; border-radius: 3px; display: flex; align-items: center; justify-content: center; }
-
-/* FEATURED JOBS */
-.job-item { font-size: 13px; padding: 7px 0; border-bottom: 1px solid #eee; }
-.job-item:last-child { border-bottom: none; }
-
-/* COUPON CARDS */
-.coupon { flex: 1; border: 1px solid #cdd4da; border-radius: 6px; background: #f7f8f9; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
-.coupon-img { width: 42px; height: 36px; background: #3a9e99; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
-.coupon-bar { height: 4px; border-radius: 2px; background: #ccc; width: 80%; }}
-    /* HERO SECTION */
-.hero {
-  background-color: #c5d8e8;
-  text-align: center;
-  padding: 36px 20px 30px;
-  border-left: 1px solid #d7e6f0;
-  border-right: 1px solid #d7e6f0;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 8px;
-}
-
-.hero-sub {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 16px;
-}
-
-.star-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.star {
-  font-size: 18px;
-  color: #9bb8cc;
-}
-
-/* TASK SECTION */
-.task-section {
-  background: #fff;
-  border: 1px solid #cdd4da;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 16px;
-}
-
-.task-section h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-  color: #111;
-}
-
-.task-input-area {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-}
-
-.task-input-area input[type="text"] {
-  flex: 1;
-  padding: 9px 12px;
-  border: 1px solid #cdd4da;
-  border-radius: 6px;
-  font-size: 13px;
-  font-family: inherit;
-  outline: none;
-}
-
-.task-input-area input[type="text"]:focus {
-  border-color: #2e7d7a;
-}
-
-.task-input-area input[type="datetime-local"] {
-  padding: 9px 12px;
-  border: 1px solid #cdd4da;
-  border-radius: 6px;
-  font-size: 13px;
-  font-family: inherit;
-  outline: none;
-}
-
-.task-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.task-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 13px;
-  padding: 6px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.task-item:last-child {
-  border-bottom: none;
-}
-
-.task-item input[type="checkbox"] {
-  width: 14px;
-  height: 14px;
-  accent-color: #2e7d7a;
-  cursor: pointer;
-}
-
-.task-item label {
-  guel Francisco <franciscomiguel251@gmail.com>
-  3:14 PM (5 minutes ago)
-  to me
-
-  /* =========================================
-   * RESET
-   * ========================================= */
-* {
-	* margin: 0;
-	* padding: 0;
-	* box-sizing: border-box;
-	* }
-  *
-	  */* =========================================
-	  BODY
-	  ========================================= */
-body {
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-background-color: #eef6fb;
-color: #222;
-padding: 20px;
-}
-
-/* =========================================
- * PAGE WRAPPER
- * ========================================= */
-.page-wrapper {
-	max-width: 1150px;
-	margin: 0 auto;
-	background-color: #ffffff;
-	border: 2px dashed #bdbdbd;
-	padding: 12px;
-}
-
-/* =========================================
- * HEADER
- * ========================================= */
-header {
-	background: linear-gradient(to right, #3f7482, #4f8794);
-	padding: 12px 18px;
-	display: grid;
-	grid-template-columns: auto 1fr 220px;
-	align-items: center;
-	gap: 18px;
-	border-radius: 10px 10px 0 0;
-}
-
-.logo-container {
-	display: flex;
-	align-items: center;
-}
-
-.logo {
-	width: 46px;
-	height: 46px;
-	object-fit: contain;
-	border-radius: 10px;
-}
-
-/* =========================================
- * NAV
- * ========================================= */
-nav ul {
-	display: flex;
-	align-items: center;
-	list-style: none;
-	gap: 28px;
-	flex-wrap: wrap;
-}
-
-nav a {
-	text-decoration: none;
-	color: #ffffff;
-	font-size: 0.95rem;
-	padding: 6px 8px;
-	border-radius: 6px;
-	transition: background-color 0.2s ease;
-}
-
-nav a.active {
-	background-color: rgba(255, 255, 255, 0.2);
-}
-
-nav a:hover {
-	background-color: rgba(255, 255, 255, 0.16);
-}
-
-/* =========================================
- * SEARCH
- * ========================================= */
-input[type="search"] {
-	width: 100%;
-	padding: 10px 14px;
-	border: 1px solid #b7b7b7;
-	border-radius: 10px;
-	background-color: #ffffff;
-	font-size: 0.9rem;
-}
-
-input[type="search"]:focus {
-	outline: 2px solid #3f7482;
-	outline-offset: 2px;
-}
-
-/* =========================================
- * ACCESSIBILITY
- * ========================================= */
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-}
-
-/* =========================================
- * HERO
- * ========================================= */
-.hero {
-	background-color: #dceefd;
-	text-align: center;
-	padding: 36px 20px 30px;
-	border-left: 1px solid #d7e6f0;
-	border-right: 1px solid #d7e6f0;
-}
-
-.hero h1 {
-	font-size: 3rem;
-	font-weight: 800;
-	color: #111;
-	margin-bottom: 20px;
-}
-
-/* =========================================
- * ADD TASK BUTTON
- * ========================================= */
-.add-task-btn {
-background-color: #4c8390;
-color: #ffffff;
-border: none;
-border-radius: 10px;
-padding: 12px 28px;
-font-size: 1.1rem;
-font-weight: 700;
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-cursor: pointer;
-transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.add-task-btn:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* =========================================
- * TASK SECTION
- * ========================================= */
-.task-section {
-	background: #fff;
-	border: 1px solid #cdd4da;
-	border-left: 1px solid #d7e6f0;
-	border-right: 1px solid #d7e6f0;
-	padding: 20px 24px;
-}
-
-.task-section h2 {
-	font-size: 1.2rem;
-	font-weight: 700;
-	margin-bottom: 14px;
-	color: #111;
-}
-
-.task-input-area {
-	display: flex;
-	gap: 10px;
-	margin-bottom: 16px;
-	flex-wrap: wrap;
-}
-
-.task-input-area input[type="text"] {
-	flex: 1;
-	padding: 9px 12px;
-	border: 1px solid #cdd4da;
-	border-radius: 6px;
-	font-size: 13px;
-	font-family: inherit;
-	outline: none;
-}
-
-.task-input-area input[type="text"]:focus {
-	border-color: #2e7d7a;
-}
-
-.task-input-area input[type="datetime-local"] {
-	padding: 9px 12px;
-	border: 1px solid #cdd4da;
-	border-radius: 6px;
-	font-size: 13px;
-	font-family: inherit;
-	outline: none;
-}
-
-.task-list {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-
-.task-item {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	font-size: 13px;
-	padding: 6px 0;
-	border-bottom: 1px solid #eee;
-}
-
-.task-item:last-child {
-	border-bottom: none;
-}
-
-.task-item input[type="checkbox"] {
-	width: 14px;
-	height: 14px;
-	accent-color: #2e7d7a;
-	cursor: pointer;
-}
-
-.task-item label {
-	cursor: pointer;
-}
-
-.task-item.done label {
-	text-decoration: line-through;
-	color: #999;
-}
-
-/* =========================================
- * MAIN GRID
- * ========================================= */
-.dashboard-grid {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-areas:
-"upcoming tools jobs"
-"discounts discounts discounts";
-gap: 16px;
-padding: 18px;
-background-color: #ffffff;
-}
-
-/* PANELS */
-.upcoming,
-.tools,
-.jobs,
-.discounts {
-	background-color: #fbfbfb;
-	border: 2px solid #4b7d87;
-	border-radius: 16px;
-	padding: 16px;
-}
-
-.upcoming { grid-area: upcoming; }
-.tools { grid-area: tools; }
-.jobs { grid-area: jobs; }
-.discounts { grid-area: discounts; }
-
-h2 {
-	font-size: 1.3rem;
-	margin-bottom: 14px;
-	color: #111;
-}
-
-/* =========================================
- * UPCOMING
- * ========================================= */
-.upcoming ul {
-	list-style: none;
-	display: grid;
-	gap: 12px;
-}
-
-.upcoming li {
-	font-size: 1rem;
-	padding-bottom: 6px;
-	border-bottom: 1px solid #eee;
-}
-
-.upcoming li:last-child {
-	border-bottom: none;
-}
-
-/* =========================================
- * TOOL CARDS
- * ========================================= */
-.tool-cards {
-display: grid;
-gap: 10px;
-}
-
-.tools .card {
-	background-color: #ededed;
-	border: 1px solid #a9a9a9;
-	border-radius: 10px;
-	padding: 12px 14px;
-	cursor: pointer;
-	transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.tools .card:hover {
-	transform: translateY(-3px);
-	border-color: #3f7482;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* =========================================
- * JOB CARDS
- * ========================================= */
-.jobs .card {
-	background: transparent;
-	border: none;
-	border-bottom: 1px solid #cfcfcf;
-	border-radius: 0;
-	padding: 10px 0;
-	margin: 0;
-	display: block;
-}
-
-.jobs .card:last-child {
-	border-bottom: none;
-}
-
-/* =========================================
- * STUDENT DISCOUNTS SLIDER
- * ========================================= */
-.discount-wrapper {
-position: relative;
-display: flex;
-align-items: center;
-padding: 0 30px;
-}
-
-.discount-viewport {
-	overflow: hidden;
-	width: 100%;
-}
-
-.discount-track {
-	display: flex;
-	gap: 15px;
-	transition: transform 0.3s ease;
-}
-
-/* Discount cards use a separate class to avoid conflicting with .card */
-.discount-card {
-	flex: 0 0 calc((100% - 30px) / 3);
-	height: 100px;
-	background: #e0f0f5;
-	border: 1px solid #4b7d87;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: bold;
-	text-align: center;
-	padding: 10px;
-	box-sizing: border-box;
-	cursor: pointer;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.discount-card:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* ARROW BUTTONS */
-.arrow {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background: #3f7482;
-	color: white;
-	border: none;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	cursor: pointer;
-	z-index: 2;
-	font-size: 1rem;
-	transition: background 0.2s ease;
-}
-
-.arrow:hover {
-	background: #2f5f6b;
-}
-
-.arrow.left { left: -10px; }
-.arrow.right { right: -10px; }
-
-/* =========================================
- * FOOTER
- * ========================================= */
-.footer {
-margin-top: 20px;
-padding: 20px;
-text-align: center;
-background: #f0f0f0;
-border-radius: 0 0 10px 10px;
-}
-
-.footer-links {
-	margin-bottom: 10px;
-}
-
-.footer-links a {
-	margin: 0 10px;
-	text-decoration: none;
-	color: #333;
-}
-
-.footer-links a:hover {
-	text-decoration: underline;
-}
-
-.footer-text {
-	font-size: 14px;
-	color: #777;
-}
-
-/* =========================================
- * RESPONSIVE — Tablet (max 900px)
- * ========================================= */
-@media (max-width: 900px) {
-	header {
-		grid-template-columns: 1fr;
-		gap: 12px;
-		text-align: center;
-	}
-
-	nav ul {
-		justify-content: center;
-		gap: 14px;
-	}
-
-	.hero h1 {
-		font-size: 2.2rem;
-	}
-
-	.dashboard-grid {
-		grid-template-columns: 1fr;
-		grid-template-areas:
-		"upcoming"
-		"tools"
-		"jobs"
-		"discounts";
-	}
-
-	.discount-card {
-		flex: 0 0 calc((100% - 15px) / 2);
-	}
-}
-
-/* =========================================
- * RESPONSIVE — Mobile (max 600px)
- * ========================================= */
-@media (max-width: 600px) {
-	body {
-		padding: 10px;
-	}
-
-	.hero h1 {
-		font-size: 1.8rem;
-	}
-
-	nav ul {
-		flex-direction: column;
-		gap: 8px;
-	}
-
-	.task-input-area {
-		flex-direction: column;
-	}
-
-	.task-input-area input,
-	.task-input-area button {
-		width: 100%;
-	}
-
-	.discount-card {
-		flex: 0 0 100%;
-	}
-}
-G
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  guel Francisco <franciscomiguel251@gmail.com>
-    3:14 PM (5 minutes ago)
-      to me
-
-        /* =========================================
-	 *    * RESET
-	 *       * ========================================= */
-* {
-	*         * margin: 0;
-	*                 * padding: 0;
-	*                         * box-sizing: border-box;
-	*                                 * }
-	*                                   *
-	*                                             */* =========================================
-	          BODY
-		            ========================================= */
-body {
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-background-color: #eef6fb;
-color: #222;
-padding: 20px;
-}
-
-/* =========================================
- *  * PAGE WRAPPER
- *   * ========================================= */
-.page-wrapper {
-        max-width: 1150px;
-	        margin: 0 auto;
-		        background-color: #ffffff;
-			        border: 2px dashed #bdbdbd;
-				        padding: 12px;
-				}
-
-				/* =========================================
-				 *  * HEADER
-				 *   * ========================================= */
-header {
-        background: linear-gradient(to right, #3f7482, #4f8794);
-	        padding: 12px 18px;
-		        display: grid;
-			        grid-template-columns: auto 1fr 220px;
-				        align-items: center;
-					        gap: 18px;
-						        border-radius: 10px 10px 0 0;
-						}
-
-						.logo-container {
-							        display: flex;
-								        align-items: center;
-								}
-
-								.logo {
-									        width: 46px;
-										        height: 46px;
-											        object-fit: contain;
-												        border-radius: 10px;
-												}
-
-												/* =========================================
-												 *  * NAV
-												 *   * ========================================= */
-nav ul {
-        display: flex;
-	        align-items: center;
-		        list-style: none;
-			        gap: 28px;
-				        flex-wrap: wrap;
-				}
-
-				nav a {
-					        text-decoration: none;
-						        color: #ffffff;
-							        font-size: 0.95rem;
-								        padding: 6px 8px;
-									        border-radius: 6px;
-										        transition: background-color 0.2s ease;
-										}
-
-										nav a.active {
-											        background-color: rgba(255, 255, 255, 0.2);
-											}
-
-											nav a:hover {
-												        background-color: rgba(255, 255, 255, 0.16);
-												}
-
-												/* =========================================
-												 *  * SEARCH
-												 *   * ========================================= */
-input[type="search"] {
-	        width: 100%;
-		        padding: 10px 14px;
-			        border: 1px solid #b7b7b7;
-				        border-radius: 10px;
-					        background-color: #ffffff;
-						        font-size: 0.9rem;
-						}
-
-						input[type="search"]:focus {
-							        outline: 2px solid #3f7482;
-								        outline-offset: 2px;
-								}
-
-								/* =========================================
-								 *  * ACCESSIBILITY
-								 *   * ========================================= */
-.visually-hidden {
-	        position: absolute;
-		        width: 1px;
-			        height: 1px;
-				        overflow: hidden;
-					        clip: rect(0, 0, 0, 0);
-						        white-space: nowrap;
-						}
-
-						/* =========================================
-						 *  * HERO
-						 *   * ========================================= */
-.hero {
-	        background-color: #dceefd;
-		        text-align: center;
-			        padding: 36px 20px 30px;
-				        border-left: 1px solid #d7e6f0;
-					        border-right: 1px solid #d7e6f0;
-					}
-
-					.hero h1 {
-						        font-size: 3rem;
-							        font-weight: 800;
-								        color: #111;
-									        margin-bottom: 20px;
-									}
-
-									/* =========================================
-									 *  * ADD TASK BUTTON
-									 *   * ========================================= */
-.add-task-btn {
-	background-color: #4c8390;
-	color: #ffffff;
-	border: none;
-	border-radius: 10px;
-	padding: 12px 28px;
-	font-size: 1.1rem;
-	font-weight: 700;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-	cursor: pointer;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.add-task-btn:hover {
-	        transform: translateY(-2px);
-		        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-		}
-
-		/* =========================================
-		 *  * TASK SECTION
-		 *   * ========================================= */
-.task-section {
-	        background: #fff;
-		        border: 1px solid #cdd4da;
-			        border-left: 1px solid #d7e6f0;
-				        border-right: 1px solid #d7e6f0;
-					        padding: 20px 24px;
-					}
-
-					.task-section h2 {
-						        font-size: 1.2rem;
-							        font-weight: 700;
-								        margin-bottom: 14px;
-									        color: #111;
-									}
-
-									.task-input-area {
-										        display: flex;
-											        gap: 10px;
-												        margin-bottom: 16px;
-													        flex-wrap: wrap;
-													}
-
-													.task-input-area input[type="text"] {
-														        flex: 1;
-															        padding: 9px 12px;
-																        border: 1px solid #cdd4da;
-																	        border-radius: 6px;
-																		        font-size: 13px;
-																			        font-family: inherit;
-																				        outline: none;
-																				}
-
-																				.task-input-area input[type="text"]:focus {
-																					        border-color: #2e7d7a;
-																					}
-
-																					.task-input-area input[type="datetime-local"] {
-																						        padding: 9px 12px;
-																							        border: 1px solid #cdd4da;
-																								        border-radius: 6px;
-																									        font-size: 13px;
-																										        font-family: inherit;
-																											        outline: none;
-																											}
-
-																											.task-list {
-																												        list-style: none;
-																													        display: flex;
-																														        flex-direction: column;
-																															        gap: 10px;
-																															}
-
-																															.task-item {
-																																        display: flex;
-																																	        align-items: center;
-																																		        gap: 8px;
-																																			        font-size: 13px;
-																																				        padding: 6px 0;
-																																					        border-bottom: 1px solid #eee;
-																																					}
-
-																																					.task-item:last-child {
-																																						        border-bottom: none;
-																																						}
-
-																																						.task-item input[type="checkbox"] {
-																																							        width: 14px;
-																																								        height: 14px;
-																																									        accent-color: #2e7d7a;
-																																										        cursor: pointer;
-																																										}
-
-																																										.task-item label {
-																																											        cursor: pointer;
-																																											}
-
-																																											.task-item.done label {
-																																												        text-decoration: line-through;
-																																													        color: #999;
-																																													}
-
-																																													/* =========================================
-																																													 *  * MAIN GRID
-																																													 *   * ========================================= */
-.dashboard-grid {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-areas:
-"upcoming tools jobs"
-"discounts discounts discounts";
-gap: 16px;
-padding: 18px;
-background-color: #ffffff;
-}
-
-/* PANELS */
-.upcoming,
-.tools,
-.jobs,
-.discounts {
-	        background-color: #fbfbfb;
-		        border: 2px solid #4b7d87;
-			        border-radius: 16px;
-				        padding: 16px;
-				}
-
-				.upcoming { grid-area: upcoming; }
-				.tools { grid-area: tools; }
-				.jobs { grid-area: jobs; }
-				.discounts { grid-area: discounts; }
-
-				h2 {
-					        font-size: 1.3rem;
-						        margin-bottom: 14px;
-							        color: #111;
-							}
-
-							/* =========================================
-							 *  * UPCOMING
-							 *   * ========================================= */
-.upcoming ul {
-        list-style: none;
-	        display: grid;
-		        gap: 12px;
-		}
-
-		.upcoming li {
-			        font-size: 1rem;
-				        padding-bottom: 6px;
-					        border-bottom: 1px solid #eee;
-					}
-
-					.upcoming li:last-child {
-						        border-bottom: none;
-						}
-
-						/* =========================================
-						 *  * TOOL CARDS
-						 *   * ========================================= */
-.tool-cards {
-display: grid;
-gap: 10px;
-}
-
-.tools .card {
-	        background-color: #ededed;
-		        border: 1px solid #a9a9a9;
-			        border-radius: 10px;
-				        padding: 12px 14px;
-					        cursor: pointer;
-						        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-						}
-
-						.tools .card:hover {
-							        transform: translateY(-3px);
-								        border-color: #3f7482;
-									        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-									}
-
-									/* =========================================
-									 *  * JOB CARDS
-									 *   * ========================================= */
-.jobs .card {
-        background: transparent;
-	        border: none;
-		        border-bottom: 1px solid #cfcfcf;
-			        border-radius: 0;
-				        padding: 10px 0;
-					        margin: 0;
-						        display: block;
-						}
-
-						.jobs .card:last-child {
-							        border-bottom: none;
-							}
-
-							/* =========================================
-							 *  * STUDENT DISCOUNTS SLIDER
-							 *   * ========================================= */
-.discount-wrapper {
-position: relative;
-display: flex;
-align-items: center;
-padding: 0 30px;
-}
-
-.discount-viewport {
-	        overflow: hidden;
-		        width: 100%;
-		}
-
-		.discount-track {
-			        display: flex;
-				        gap: 15px;
-					        transition: transform 0.3s ease;
-					}
-
-					/* Discount cards use a separate class to avoid conflicting with .card */
-					.discount-card {
-						        flex: 0 0 calc((100% - 30px) / 3);
-							        height: 100px;
-								        background: #e0f0f5;
-									        border: 1px solid #4b7d87;
-										        border-radius: 10px;
-											        display: flex;
-												        align-items: center;
-													        justify-content: center;
-														        font-weight: bold;
-															        text-align: center;
-																        padding: 10px;
-																	        box-sizing: border-box;
-																		        cursor: pointer;
-																			        transition: transform 0.2s ease, box-shadow 0.2s ease;
-																			}
-
-																			.discount-card:hover {
-																				        transform: translateY(-3px);
-																					        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-																					}
-
-																					/* ARROW BUTTONS */
-																					.arrow {
-																						        position: absolute;
-																							        top: 50%;
-																								        transform: translateY(-50%);
-																									        background: #3f7482;
-																										        color: white;
-																											        border: none;
-																												        width: 40px;
-																													        height: 40px;
-																														        border-radius: 50%;
-																															        cursor: pointer;
-																																        z-index: 2;
-																																	        font-size: 1rem;
-																																		        transition: background 0.2s ease;
-																																		}
-
-																																		.arrow:hover {
-																																			        background: #2f5f6b;
-																																			}
-
-																																			.arrow.left { left: -10px; }
-																																			.arrow.right { right: -10px; }
-
-																																			/* =========================================
-																																			 *  * FOOTER
-																																			 *   * ========================================= */
-.footer {
-margin-top: 20px;
-padding: 20px;
-text-align: center;
-background: #f0f0f0;
-border-radius: 0 0 10px 10px;
-}
-
-.footer-links {
-	        margin-bottom: 10px;
-	}
-
-	.footer-links a {
-		        margin: 0 10px;
-			        text-decoration: none;
-				        color: #333;
-				}
-
-				.footer-links a:hover {
-					        text-decoration: underline;
-					}
-
-					.footer-text {
-						        font-size: 14px;
-							        color: #777;
-							}
-
-							/* =========================================
-							 *  * RESPONSIVE — Tablet (max 900px)
-							 *   * ========================================= */
-@media (max-width: 900px) {
-	        header {
-			                grid-template-columns: 1fr;
-					                gap: 12px;
-							                text-align: center;
-									        }
-
-										        nav ul {
-												                justify-content: center;
-														                gap: 14px;
-																        }
-
-																	        .hero h1 {
-																			                font-size: 2.2rem;
-																					        }
-
-																						        .dashboard-grid {
-																								                grid-template-columns: 1fr;
-																										                grid-template-areas:
-																												                "upcoming"
-																														                "tools"
-																																                "jobs"
-																																		                "discounts";
-																																				        }
-
-																																					        .discount-card {
-																																							                flex: 0 0 calc((100% - 15px) / 2);
-																																									        }
-																																									}
-
-																																									/* =========================================
-																																									 *  * RESPONSIVE — Mobile (max 600px)
-																																									 *   * ========================================= */
-@media (max-width: 600px) {
-	        body {
-			                padding: 10px;
-					        }
-
-						        .hero h1 {
-								                font-size: 1.8rem;
-										        }
-
-											        nav ul {
-													                flex-direction: column;
-															                gap: 8px;
-																	        }
-
-																		        .task-input-area {
-																				                flex-direction: column;
-																						        }
-
-																							        .task-input-area input,
-																								        .task-input-area button {
-																										                width: 100%;
-																												        }
-
-																													        .discount-card {
-																															                flex: 0 0 100%;
-																																	        }
-																																	}
-																																	Gcursor: pointer;
-																																}
-
-																																.task-item.done label {
-																																	  text-decoration: line-through;
-																																	    color: #999;
-																																	              [+] [dos] (11:38 19/04/2026)                                                                                                                                                 978,2 98%
-																																		      -- INSERT --
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-																																		        guel Francisco <franciscomiguel251@gmail.com>
-																																			    3:14 PM (5 minutes ago)
-																																			          to me
-
-																																				          /* =========================================
-																																					   *          *    * RESET
-																																					   *                   *       * ========================================= */
-* {
-	*         *         * margin: 0;
-	*                 *                 * padding: 0;
-	*                         *                         * box-sizing: border-box;
-	*                                 *                                 * }
-																																		      *                                         *                                   *
-																																			      *                                                 *                                             */* =========================================
-																																			                        BODY
-																																						                            ========================================= */
-body {
-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-background-color: #eef6fb;
-color: #222;
-padding: 20px;
-}
-
-/* =========================================
- *  *  * PAGE WRAPPER
- *   *   * ========================================= */
-.page-wrapper {
-        max-width: 1150px;
-	                margin: 0 auto;
-			                        background-color: #ffffff;
-						                                border: 2px dashed #bdbdbd;
-										                                        padding: 12px;
-															                                }
-
-																			                                /* =========================================
-																							 *                                  *  * HEADER
-																							 *                                                                   *   * ========================================= */
-header {
-        background: linear-gradient(to right, #3f7482, #4f8794);
-	                padding: 12px 18px;
-			                        display: grid;
-						                                grid-template-columns: auto 1fr 220px;
-										                                        align-items: center;
-															                                                gap: 18px;
-																					                                                        border-radius: 10px 10px 0 0;
-																												                                                }
-
-																																		                                                .logo-container {
-																																									                                                                display: flex;
-																																																	                                                                        align-items: center;
-																																																										                                                                }
-
-																																																																		                                                                .logo {
-																																																																											                                                                                width: 46px;
-																																																																																					                                                                                        height: 46px;
-																																																																																																                                                                                                object-fit: contain;
-																																																																																																												                                                                                                        border-radius: 10px;
-																																																																																																																									                                                                                                }
-
-																																																																																																																																					                                                                                                /* =========================================
-																																																																																																																																																	 *                                                                                                  *  * NAV
-																																																																																																																																																	 *                                                                                                                                                                                                   *   * ========================================= */
-nav ul {
-        display: flex;
-	                align-items: center;
-			                        list-style: none;
-						                                gap: 28px;
-										                                        flex-wrap: wrap;
-															                                }
-
-																			                                nav a {
-																								                                                text-decoration: none;
-																														                                                        color: #ffffff;
-																																					                                                                font-size: 0.95rem;
-																																													                                                                        padding: 6px 8px;
-																																																						                                                                                border-radius: 6px;
-																																																																                                                                                        transition: background-color 0.2s ease;
-																																																																											                                                                                }
-
-																																																																																					                                                                                nav a.active {
-																																																																																																                                                                                                background-color: rgba(255, 255, 255, 0.2);
-																																																																																																												                                                                                        }
-
-																																																																																																																							                                                                                        nav a:hover {
-																																																																																																																																			                                                                                                        background-color: rgba(255, 255, 255, 0.16);
-																																																																																																																																																                                                                                                }
-
-																																																																																																																																																												                                                                                                /* =========================================
-																																																																																																																																																																								 *                                                                                                  *  * SEARCH
-																																																																																																																																																																								 *                                                                                                                                                                                                   *   * ========================================= */
-input[type="search"] {
-	                width: 100%;
-			                        padding: 10px 14px;
-						                                border: 1px solid #b7b7b7;
-										                                        border-radius: 10px;
-															                                                background-color: #ffffff;
-																					                                                        font-size: 0.9rem;
-																												                                                }
-
-																																		                                                input[type="search"]:focus {
-																																									                                                                outline: 2px solid #3f7482;
-																																																	                                                                        outline-offset: 2px;
-																																																										                                                                }
-
-																																																																		                                                                /* =========================================
-																																																																										 *                                                                  *  * ACCESSIBILITY
-																																																																										 *                                                                                                                                   *   * ========================================= */
-.visually-hidden {
-	                position: absolute;
-			                        width: 1px;
-						                                height: 1px;
-										                                        overflow: hidden;
-															                                                clip: rect(0, 0, 0, 0);
-																					                                                        white-space: nowrap;
-																												                                                }
-
-																																		                                                /* =========================================
-																																								 *                                                  *  * HERO
-																																								 *                                                                                                   *   * ========================================= */
-.hero {
-	                background-color: #dceefd;
-			                        text-align: center;
-						                                padding: 36px 20px 30px;
-										                                        border-left: 1px solid #d7e6f0;
-															                                                border-right: 1px solid #d7e6f0;
-																					                                        }
-
-																										                                        .hero h1 {
-																																                                                        font-size: 3rem;
-																																							                                                                font-weight: 800;
-																																															                                                                        color: #111;
-																																																								                                                                                margin-bottom: 20px;
-																																																																		                                                                        }
-
-																																																																											                                                                        /* =========================================
-																																																																																				 *                                                                          *  * ADD TASK BUTTON
-																																																																																				 *                                                                                                                                                   *   * ========================================= */
-.add-task-btn {
-        background-color: #4c8390;
-	        color: #ffffff;
-		        border: none;
-			        border-radius: 10px;
-				        padding: 12px 28px;
-					        font-size: 1.1rem;
-						        font-weight: 700;
-							        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-								        cursor: pointer;
-									        transition: transform 0.2s ease, box-shadow 0.2s ease;
-									}
-
-									.add-task-btn:hover {
-										                transform: translateY(-2px);
-												                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-															                }
-
-																	                /* =========================================
-																			 *                  *  * TASK SECTION
-																			 *                                   *   * ========================================= */
-.task-section {
-                background: #fff;
-		                        border: 1px solid #cdd4da;
-					                                border-left: 1px solid #d7e6f0;
-									                                        border-right: 1px solid #d7e6f0;
-														                                                padding: 20px 24px;
-																				                                        }
-
-																									                                        .task-section h2 {
-																															                                                        font-size: 1.2rem;
-																																						                                                                font-weight: 700;
-																																														                                                                        margin-bottom: 14px;
-																																																							                                                                                color: #111;
-																																																																	                                                                        }
-
-																																																																										                                                                        .task-input-area {
-																																																																																				                                                                                        display: flex;
-																																																																																															                                                                                                gap: 10px;
-																																																																																																											                                                                                                        margin-bottom: 16px;
-																																																																																																																								                                                                                                                flex-wrap: wrap;
-																																																																																																																																						                                                                                                        }
-
-																																																																																																																																																			                                                                                                        .task-input-area input[type="text"] {
-																																																																																																																																																																	                                                                                                                        flex: 1;
-																																																																																																																																																																																                                                                                                                                padding: 9px 12px;
-																																																																																																																																																																																																                                                                                                                                        border: 1px solid #cdd4da;
-																																																																																																																																																																																																																	                                                                                                                                                border-radius: 6px;
-																																																																																																																																																																																																																																			                                                                                                                                                        font-size: 13px;
-																																																																																																																																																																																																																																																						                                                                                                                                                                font-family: inherit;
-																																																																																																																																																																																																																																																																										                                                                                                                                                                        outline: none;
-																																																																																																																																																																																																																																																																																															                                                                                                                                                                }
-
-																																																																																																																																																																																																																																																																																																																			                                                                                                                                                                .task-input-area input[type="text"]:focus {
-																																																																																																																																																																																																																																																																																																																																								                                                                                                                                                                                border-color: #2e7d7a;
-																																																																																																																																																																																																																																																																																																																																																														                                                                                                                                                                        }
-
-																																																																																																																																																																																																																																																																																																																																																																																			                                                                                                                                                                        .task-input-area input[type="datetime-local"] {
-																																																																																																																																																																																																																																																																																																																																																																																																									                                                                                                                                                                                        padding: 9px 12px;
-																																																																																																																																																																																																																																																																																																																																																																																																																																                                                                                                                                                                                                border: 1px solid #cdd4da;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																								        border-radius: 6px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																									                font-size: 13px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																											                        font-family: inherit;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																														                                outline: none;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																		                        }
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																					                                                                                                                                                                                                                        .task-list {
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	                                        list-style: none;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						                                                display: flex;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												                                                        flex-direction: column;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																			                                                                gap: 10px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                                                        }
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		                                                                                                                                                                                                                                                        .task-item {
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																		                                                                        display: flex;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											                                                                                align-items: center;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					                                                                                        gap: 8px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																                                                                                                font-size: 13px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												                                                                                                        padding: 6px 0;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									                                                                                                                border-bottom: 1px solid #eee;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							                                                                                                        }
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				                                                                                                                                                                                                                                                                                                        .task-item:last-child {
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                                                                                                                        border-bottom: none;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									                                                                                                                }
-
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							                                                                                                                .task-item input[type="checkbox"] {
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						                                                                                                                                width: 14px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																						                                                                                                                                        height: 14px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							                                                                                                                                                accent-color: #2e7d7a;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									                                                                                                                                                        cursor: pointer;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												                                                                                                                                                }
-
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																														                                                                                                                                                .task-item label {
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	                                                                                                                                                                cursor: pointer;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					                                                                                                                                                        }
-
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								                                                                                                                                                        .task-item.done label {
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												                                                                                                                                                                        text-decoration: line-through;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	                                                                                                                                                                                color: #999;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																							                                                                                                                                                                        }
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																												                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        /* =========================================
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	 *                                                                                                                                                                                                                                                                                                                                                                          *  * MAIN GRID
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	 *                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   *   * ========================================= */
-.dashboard-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-areas:
-	"upcoming tools jobs"
-	"discounts discounts discounts";
-	gap: 16px;
-	padding: 18px;
-	background-color: #ffffff;
-}
-
-/* PANELS */
-.upcoming,
-.tools,
-.jobs,
-.discounts {
-	                background-color: #fbfbfb;
-			                        border: 2px solid #4b7d87;
-						                                border-radius: 16px;
-										                                        padding: 16px;
-															                                }
-
-																			                                .upcoming { grid-area: upcoming; }
-																							                                .tools { grid-area: tools; }
-																											                                .jobs { grid-area: jobs; }
-																															                                .discounts { grid-area: discounts; }
-
-																																			                                h2 {
-																																								                                                font-size: 1.3rem;
-																																														                                                        margin-bottom: 14px;
-																																																					                                                                color: #111;
-																																																													                                                        }
-
-																																																																				                                                        /* =========================================
-																																																																											 *                                                          *  * UPCOMING
-																																																																											 *                                                                                                                   *   * ========================================= */
-.upcoming ul {
-        list-style: none;
-	                display: grid;
-			                        gap: 12px;
-						                }
-
-								                .upcoming li {
-											                                font-size: 1rem;
-															                                        padding-bottom: 6px;
-																				                                                border-bottom: 1px solid #eee;
-																										                                        }
-
-																															                                        .upcoming li:last-child {
-																																					                                                        border-bottom: none;
-																																												                                                }
-
-																																																		                                                /* =========================================
-																																																								 *                                                  *  * TOOL CARDS
-																																																								 *                                                                                                   *   * ========================================= */
-.tool-cards {
-display: grid;
-gap: 10px;
-}
-
-.tools .card {
-	                background-color: #ededed;
-			                        border: 1px solid #a9a9a9;
-						                                border-radius: 10px;
-										                                        padding: 12px 14px;
-															                                                cursor: pointer;
-																					                                                        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-																												                                                }
-
-																																		                                                .tools .card:hover {
-																																									                                                                transform: translateY(-3px);
-																																																	                                                                        border-color: #3f7482;
-																																																										                                                                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-																																																																				                                                                        }
-
-																																																																													                                                                        /* =========================================
-																																																																																						 *                                                                          *  * JOB CARDS
-																																																																																						 *                                                                                                                                                   *   * ========================================= */
-.jobs .card {
-	        background: transparent;
-		                border: none;
-				                        border-bottom: 1px solid #cfcfcf;
-							                                border-radius: 0;
-											                                        padding: 10px 0;
-																                                                margin: 0;
-																						                                                        display: block;
-																													                                                }
-
-																																			                                                .jobs .card:last-child {
-																																										                                                                border-bottom: none;
-																																																		                                                        }
-
-																																																									                                                        /* =========================================
-																																																																 *                                                          *  * STUDENT DISCOUNTS SLIDER
-																																																																 *                                                                                                                   *   * ========================================= */
-.discount-wrapper {
-position: relative;
-display: flex;
-align-items: center;
-padding: 0 30px;
-}
-
-.discount-viewport {
-	                overflow: hidden;
-			                        width: 100%;
-						                }
-
-								                .discount-track {
-											                                display: flex;
-															                                        gap: 15px;
-																				                                                transition: transform 0.3s ease;
-																										                                        }
-
-																															                                        /* Discount cards use a separate class to avoid conflicting with .card */
-																															                                        .discount-card {
-																																					                                                        flex: 0 0 calc((100% - 30px) / 3);
-																																												                                                                height: 100px;
-																																																				                                                                        background: #e0f0f5;
-																																																													                                                                                border: 1px solid #4b7d87;
-																																																																							                                                                                        border-radius: 10px;
-																																																																																		                                                                                                display: flex;
-																																																																																														                                                                                                        align-items: center;
-																																																																																																											                                                                                                                justify-content: center;
-																																																																																																																									                                                                                                                        font-weight: bold;
-																																																																																																																																								                                                                                                                                text-align: center;
-																																																																																																																																																								                                                                                                                                        padding: 10px;
-																																																																																																																																																																									                                                                                                                                                box-sizing: border-box;
-																																																																																																																																																																																											                                                                                                                                                        cursor: pointer;
-																																																																																																																																																																																																														                                                                                                                                                                transition: transform 0.2s ease, box-shadow 0.2s ease;
-																																																																																																																																																																																																																																		                                                                                                                                                        }
-
-																																																																																																																																																																																																																																																					                                                                                                                                                        .discount-card:hover {
-																																																																																																																																																																																																																																																																									                                                                                                                                                                        transform: translateY(-3px);
-																																																																																																																																																																																																																																																																																														                                                                                                                                                                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-																																																																																																																																																																																																																																																																																																																				                                                                                                                                                                        }
-
-																																																																																																																																																																																																																																																																																																																																									                                                                                                                                                                        /* ARROW BUTTONS */
-																																																																																																																																																																																																																																																																																																																																									                                                                                                                                                                        .arrow {
-																																																																																																																																																																																																																																																																																																																																																															                                                                                                                                                                                        position: absolute;
-																																																																																																																																																																																																																																																																																																																																																																																						                                                                                                                                                                                                top: 50%;
-
-																																																																																																																																																																																																																																																																																																																																																																																																														        transform: translateY(-50%);
-
-																																																																																																																																																																																																																																																																																																																																																																																																															                background: #3f7482;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																	                        color: white;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																				                                border: none;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																								                                        width: 40px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																													                                                height: 40px;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																			                                                        border-radius: 50%;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																										                                                                cursor: pointer;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																		                                                                        z-index: 2;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																											                                                                                font-size: 1rem;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																					                                                                                        transition: background 0.2s ease;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																                                                                                }
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                                                                                                                                                                                                                                                                                .arrow:hover {
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													                                                                                                background: #2f5f6b;
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									                                                                                        }
-
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				                                                                                        .arrow.left { left: -10px; }
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															                                                                                        .arrow.right { right: -10px; }
-
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										                                                                                                                                                                                                                                                                                        /* =========================================
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													 *                                                                                                                                                                                                                                                                                          *  * FOOTER
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																													 *                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   *   * ========================================= */
-.footer {
-	margin-top: 20px;
-	padding: 20px;
-	text-align: center;
-	background: #f0f0f0;
-	border-radius: 0 0 10px 10px;
-}
-
-.footer-links {
-	                margin-bottom: 10px;
-			        }
-
-				        .footer-links a {
-						                        margin: 0 10px;
-									                                text-decoration: none;
-													                                        color: #333;
-																		                                }
-
-																						                                .footer-links a:hover {
-																											                                                text-decoration: underline;
-																																	                                        }
-
-																																						                                        .footer-text {
-																																												                                                        font-size: 14px;
-																																																			                                                                color: #777;
-																																																											                                                        }
-
-																																																																		                                                        /* =========================================
-																																																																									 *                                                          *  * RESPONSIVE — Tablet (max 900px)
-																																																																									 *                                                                                                                   *   * ========================================= */
-@media (max-width: 900px) {
-	                header {
-				                                        grid-template-columns: 1fr;
-									                                                        gap: 12px;
-																                                                                        text-align: center;
-																									                                                                                }
-
-																																			                                                                                        nav ul {
-																																															                                                                                                                justify-content: center;
-																																																													                                                                                                                                gap: 14px;
-																																																																													                                                                                                                                        }
-
-																																																																																														                                                                                                                                                .hero h1 {
-																																																																																																																	                                                                                                                                                                        font-size: 2.2rem;
-																																																																																																																																						                                                                                                                                                                                }
-
-																																																																																																																																																												                                                                                                                                                                                        .dashboard-grid {
-
-																																																																																																																																																																																				                grid-template-columns: 1fr;
-
-																																																																																																																																																																																						                                grid-template-areas:
-
-																																																																																																																																																																																										                                                "upcoming"
-
-																																																																																																																																																																																																                                                                "tools"
-
-																																																																																																																																																																																																								                                                                                "jobs"
-
-																																																																																																																																																																																																																		                                                                                                "discounts";
-
-																																																																																																																																																																																																																														                                                                                                        }
-
-
-																																																																																																																																																																																																																																											                                                                                                                .discount-card {
-
-																																																																																																																																																																																																																																																										                                                                                                                                        flex: 0 0 calc((100% - 15px) / 2);
-
-																																																																																																																																																																																																																																																																											                                                                                                                                                }
-
-																																																																																																																																																																																																																																																																																													                                                                                                                                        }
-
-
-																																																																																																																																																																																																																																																																																																														                                                                                                                                        /* =========================================
-																																																																																																																																																																																																																																																																																																																															 *                                                                                                                                                                                                                                                                                                                                          *  * RESPONSIVE — Mobile (max 600px)
-																																																																																																																																																																																																																																																																																																																															 *                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   *   * ========================================= */
-@media (max-width: 600px) {
-	                body {
-				                                        padding: 10px;
-									                                                }
-
-															                                                        .hero h1 {
-																							                                                                                font-size: 1.8rem;
-																																	                                                                                        }
-
-																																												                                                                                                nav ul {
-																																																									                                                                                                                        flex-direction: column;
-																																																																								                                                                                                                                        gap: 8px;
-																																																																																									                                                                                                                                                }
-
-																																																																																																											                                                                                                                                                        .task-input-area {
-																																																																																																																															                                                                                                                                                                                flex-direction: column;
-																																																																																																																																																					                                                                                                                                                                                        }
-
-																																																																																																																																																																												                                                                                                                                                                                                .task-input-area input,
-
-																																																																																																																																																																																																				        .task-input-area button {
-
-																																																																																																																																																																																																						                                width: 100%;
-
-																																																																																																																																																																																																										                                        }
-
-
-																																																																																																																																																																																																															                                                .discount-card {
-
-																																																																																																																																																																																																																						                                                                        flex: 0 0 100%;
-
-																																																																																																																																																																																																																															                                                                                }
-
-																																																																																																																																																																																																																																									                                                                        }
-
-																																																																																																																																																																																																																																																		                                                                        Gcursor: pointer;
-
-																																																																																																																																																																																																																																																											                                                                }
-
-
-																																																																																																																																																																																																																																																																			                                                                .task-item.done label {
-
-																																																																																																																																																																																																																																																																												                                                                          text-decoration: line-through;
-
-																																																																																																																																																																																																																																																																																					                                                                              color: #999;
-
-																																																																																																																																																																																																																																																																																														                                                                                            [+] [dos] (11:38 19/04/2026)                                                                                                                                                 978,2 98%
-
-																																																																																																																																																																																																																																																																																																									                                                                                          -- INSERT --
-
-																																																																																																																																																																																																																																																																																																																				                                                                                        cursor: pointer;
-																																																																																																																																																																																																																																																																																																																														}
-
-																																																																																																																																																																																																																																																																																																																														.task-item.done label {
-																																																																																																																																																																																																																																																																																																																															  text-decoration: line-through;
-																																																																																																																																																																																																																																																																																																																															    color: #999;
-																																																																																																																																																																																																																																																																																																																															                                                                                                                                                                                     1504,41-279
-																																																																																																																																																																																																																																																																																																																																																					     cursor: pointer;
-}
-
-.task-item.done label {
-  text-decoration: line-through;
-  color: #999;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .task-input-area {
-    flex-direction: column;
-  }
-
-  .task-input-area input,
-  .task-input-area button {
-    width: 100%;
-  }
-}
+    .discount-card {
+        flex: 0 0 100%;
+    }
 }
