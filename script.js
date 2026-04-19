@@ -6,7 +6,7 @@ const searchInput = document.querySelector("#search");
 
 // SEARCHABLE ITEMS
 const searchableItems = document.querySelectorAll(
-    ".upcoming li, .tools .card, .jobs .card, .discounts .card"
+    ".upcoming li, .tools .card, .jobs .card, .discounts .discount-card"
 );
 
 // ACTIVE TAB HIGHLIGHT
@@ -39,62 +39,73 @@ searchInput.addEventListener("input", function () {
     });
 });
 
-// Student Discounts
-let track = document.getElementById("track");
+// STUDENT DISCOUNTS SLIDER
+const track = document.getElementById("track");
 let index = 0;
 
-let totalCards = document.querySelectorAll(".card").length;
-let maxIndex = totalCards - 3; // show 3 at a time
+const totalCards = document.querySelectorAll(".discount-card").length;
+const maxIndex = totalCards - 3;
 
 document.getElementById("rightBtn").onclick = function () {
-  if (index < maxIndex) {
-    index++;
-    updateSlider();
-  }
+    if (index < maxIndex) {
+        index++;
+        updateSlider();
+    }
 };
 
 document.getElementById("leftBtn").onclick = function () {
-  if (index > 0) {
-    index--;
-    updateSlider();
-  }
+    if (index > 0) {
+        index--;
+        updateSlider();
+    }
 };
 
 function updateSlider() {
-  let cardWidth = document.querySelector(".card").offsetWidth + 15; // gap
-  track.style.transform = "translateX(-" + (index * cardWidth) + "px)";
-// Add Task Function
+    const cardWidth = document.querySelector(".discount-card").offsetWidth + 15;
+    track.style.transform = "translateX(-" + (index * cardWidth) + "px)";
+}
+
+// TOGGLE TASK SECTION
+function toggleTaskSection() {
+    const taskSection = document.getElementById("taskSection");
+
+    if (taskSection.style.display === "none" || taskSection.style.display === "") {
+        taskSection.style.display = "block";
+    } else {
+        taskSection.style.display = "none";
+    }
+}
+
+// ADD TASK FUNCTION
 function addTask() {
-    const input = document.getElementById('taskInput');
-    const date = document.getElementById('taskDate');
-    const list = document.getElementById('taskList');
+    const input = document.getElementById("taskInput");
+    const date = document.getElementById("taskDate");
+    const list = document.getElementById("taskList");
+
     if (!input.value.trim()) return;
-    const li = document.createElement('li');
-    li.className = 'task-item';
+
+    const li = document.createElement("li");
+    li.className = "task-item";
+
     const timeLabel = date.value
-      ? new Date(date.value).toLocaleString('en-US',
-          {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'})
-      : '';
+        ? new Date(date.value).toLocaleString("en-US", {
+              month: "short",
+              day: "numeric",
+              hour: "numeric",
+              minute: "2-digit"
+          })
+        : "";
+
     li.innerHTML = `
-      <input type="checkbox" onchange="this.parentElement.classList.toggle('done', this.checked)"/>
-      <label><b>${input.value}</b>${timeLabel ? ' - ' + timeLabel : ''}</label>`;
+        <input type="checkbox" onchange="this.parentElement.classList.toggle('done', this.checked)">
+        <label><b>${input.value}</b>${timeLabel ? " - " + timeLabel : ""}</label>
+    `;
+
     list.appendChild(li);
-    input.vaconst input = document.getElementById('taskInput');
-	    const date = document.getElementById('taskDate');
-	    const list = document.getElementById('taskList');
-	    if (!input.value.trim()) return;
-	    const li = document.createElement('li');
-	    li.className = 'task-item';
-	    const timeLabel = date.value
-	      ? new Date(date.value).toLocaleString('en-US',
-		                {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'})
-	      : '';
-	    li.innerHTML = `
-	      <input type="checkbox" onchange="this.parentElement.classList.toggle('done', this.checked)"/>
-	            <label><b>${input.value}</b>${timeLabel ? ' - ' + timeLabel : ''}</label>`;
-		        list.appendChild(li);
-	    input.va;
-}}
+
+    input.value = "";
+    date.value = "";
+}
 ~
 	// =========================================
 	// // NAVIGATION — Active Tab Highlight
