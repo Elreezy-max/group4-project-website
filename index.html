@@ -1,5 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Student Dashboard</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+
+		<div class="page-wrapper">
+
+			<!-- HEADER -->
+			<header>
+				<div class="logo-container">
+					<img src="logo.png" alt="EB Logo" class="logo">
+				</div>
+
+				<nav aria-label="Main Navigation">
+					<ul>
+						<li><a href="#" class="active" aria-current="page">Home</a></li>
+						<li><a href="#">Study Tools</a></li>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">Roommates</a></li>
+						<li><a href="#">Coupons</a></li>
+					</ul>
+				</nav>
+
+				<label for="search" class="visually-hidden">Search dashboard</label>
+				<input
+				type="search"
+				id="search"
+				placeholder="Search..."
+				aria-label="Search dashboard content"
+				>
+			</header>
+
+				<!-- WELCOME BANNER -->
+				<section class="hero" aria-labelledby="hero-title">
+					<h1 id="hero-title">[ Welcome, Student! ]</h1>
+					<button class="add-task-btn" onclick="toggleTaskSection()">Add Task</button>
+				</section>
+
+				<!-- ADD TASK SECTION (hidden by default) -->
+				<div class="task-section" id="taskSection" style="display:none;">
+					<h2>Add a New Task</h2>
+					<div class="task-input-area">
+						<input type="text" id="taskInput" placeholder="Enter task name...">
+						<input type="datetime-local" id="taskDate">
+						<button class="add-task-btn" onclick="addTask()">Add</button>
+					</div>
+					<ul class="task-list" id="taskList"></ul>
+				</div>
+
+				<!-- MAIN GRID -->
+				<main class="dashboard-grid">
+
+					<section class="upcoming" aria-labelledby="upcoming-title">
+						<h2 id="upcoming-title">Upcoming</h2>
+						<ul>
+							<li>Math Quiz - Today 2:00 PM</li>
+							<li>Essay Due - Fri 11:59 PM</li>
+							<li>Group Meeting - Sat 10:00 AM</li>
+						</ul>
+					</section>
+
+					<section class="tools" aria-labelledby="tools-title">
+						<h2 id="tools-title">Quick Tools</h2>
+						<div class="tool-cards">
+							<div class="card">Scan PDF</div>
+							<div class="card">Record Lecture</div>
+							<div class="card">Summarize AI</div>
+						</div>
+					</section>
+
+					<section class="jobs" aria-labelledby="jobs-title">
+						<h2 id="jobs-title">Featured Jobs</h2>
+						<article class="card">Babysitting - $20/hr</article>
+						<article class="card">Library Asst. - Part-time</article>
+						<article class="card">Tutor - CS 101</article>
+					</section>
+
+					<section class="discounts" aria-labelledby="discounts-title">
+						<h2 id="discounts-title">Student Discounts</h2>
+
+						<div class="discount-wrapper">
+							<button class="arrow left" id="leftBtn" aria-label="Previous discounts">&#10094;</button>
+
+							<div class="discount-viewport">
+								<div class="discount-track" id="track">
+									<div class="discount-card">10% Off Cafe</div>
+									<div class="discount-card">20% Off Gym</div>
+									<div class="discount-card">Free Drink w/ Meal</div>
+									<div class="discount-card">15% Off Books</div>
+									<div class="discount-card">Buy 1 Get 1 Pizza</div>
+									<div class="discount-card">Movie Discount</div>
+									<div class="discount-card">50% Off Cafe</div>
+									<div class="discount-card">30% Off Gym</div>
+									<div class="discount-card">Free Drink w/ Meal</div>
+									<div class="discount-card">35% Off Books</div>
+									<div class="discount-card">Buy 1 Get 1 Pizza</div>
+									<div class="discount-card">Movie Discount</div>
+									<div class="discount-card">15% Off Cafe</div>
+									<div class="discount-card">35% Off Gym</div>
+									<div class="discount-card">Free Drink w/ Meal</div>
+									<div class="discount-card">65% Off Books</div>
+									<div class="discount-card">Buy 1 Get 1 Pizza</div>
+									<div class="discount-card">Movie Discount</div>
+								</div>
+							</div>
+
+							<button class="arrow right" id="rightBtn" aria-label="Next discounts">&#10095;</button>
+						</div>
+					</section>
+
+				</main>
+
+				<!-- Footer -->
+				<footer class="footer">
+					<div class="footer-links">
+		<a href="https://github.com/Elreezy-max/group4-project-website">GitHub</a>
+					</div>
+ 		<p class="footer-text">&copy; 2026 EduBalance Platform</p>
+		</footer>
+		</div>
+	<script src="script.js"></script>
+	</body>
+</html html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,5 +242,4 @@
 
     </div>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>
