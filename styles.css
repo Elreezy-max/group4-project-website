@@ -372,6 +372,24 @@ h2 {
 
     .hero {
         text-align: center;
+    }
+/* UPCOMING TASKS */
+.task-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.task-item { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.task-item input[type=checkbox] { width: 13px; height: 13px; accent-color: #2e7d7a; }
+
+/* QUICK TOOLS */
+.tool-btn { display: flex; align-items: center; gap: 10px; width: 100%; background: #f0f0f0; border: 1px solid #d4d4d4; border-radius: 5px; padding: 9px 13px; font-size: 13px; margin-bottom: 8px; cursor: pointer; }
+.tool-icon { width: 22px; height: 22px; background: #3a9e99; border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+
+/* FEATURED JOBS */
+.job-item { font-size: 13px; padding: 7px 0; border-bottom: 1px solid #eee; }
+.job-item:last-child { border-bottom: none; }
+
+/* COUPON CARDS */
+.coupon { flex: 1; border: 1px solid #cdd4da; border-radius: 6px; background: #f7f8f9; padding: 10px; display: flex; flex-direction: column; gap: 7px; }
+.coupon-img { width: 42px; height: 36px; background: #3a9e99; border-radius: 4px; display: flex; align-items: center; justify-content: center; }
+.coupon-bar { height: 4px; border-radius: 2px; background: #ccc; width: 80%; }}
     /* HERO SECTION */
 .hero {
   background-color: #c5d8e8;
