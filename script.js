@@ -63,4 +63,22 @@ document.getElementById("leftBtn").onclick = function () {
 function updateSlider() {
   let cardWidth = document.querySelector(".card").offsetWidth + 15; // gap
   track.style.transform = "translateX(-" + (index * cardWidth) + "px)";
-}
+// Add Task Function
+function addTask() {
+    const input = document.getElementById('taskInput');
+    const date = document.getElementById('taskDate');
+    const list = document.getElementById('taskList');
+    if (!input.value.trim()) return;
+    const li = document.createElement('li');
+    li.className = 'task-item';
+    const timeLabel = date.value
+      ? new Date(date.value).toLocaleString('en-US',
+          {month:'short', day:'numeric', hour:'numeric', minute:'2-digit'})
+      : '';
+    li.innerHTML = `
+      <input type="checkbox" onchange="this.parentElement.classList.toggle('done', this.checked)"/>
+      <label><b>${input.value}</b>${timeLabel ? ' - ' + timeLabel : ''}</label>`;
+    list.appendChild(li);
+    input.value = '';
+    date.value = '';
+}}
