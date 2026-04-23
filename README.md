@@ -72,7 +72,7 @@ Our goal for the website is for it to be:
 
 ## Wireframe
 
-![Wireframe](https://github.com/Elreezy-max/group4-project-website/blob/main/wireframe_group4.png?raw=true)
+![Wireframe](images/wireframe_group4.png)
 
 
 ## Meet The Developers
@@ -108,11 +108,6 @@ Hello, my name is Annastasia, and I live in The Shoals Area of North Alabama. I 
 - CSS
 - JavaScript
 
-### Frameworks / Libraries
-- Bootstrap
-
-### Backend / Database
-- Supabase
 
 ### Hosting
 - GitHub Pages
